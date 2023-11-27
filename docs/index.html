@@ -19,48 +19,12 @@
     <link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Gugi|Noto+Serif+KR|Stylish|Sunflower:300"
           rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
-
-
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        function sendMail() {
-
-            (function () {
-                emailjs.init("user_yjLL5xG0A3kkOCH5BGIDh");
-                emailjs.send("wedding-mail", "gift_send", {
-                    name: $("#sender-name").value,
-                    gift: $("#gift-name").text(),
-                    message: $("#sender-message").value
-                }).then(function (response) {
-                    console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-                }, function (err) {
-                    console.log("FAILED. error=", err);
-                });
-            })();
-        }
-
-        function findGetParameter(parameterName) {
-            var result = null,
-                tmp = [];
-            location.search
-                .substr(1)
-                .split("&")
-                .forEach(function (item) {
-                  tmp = item.split("=");
-                  if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-                });
-            return result;
-        }
-
-    </script>
 </head>
 
 <body id="top">
 <header></header>
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.2"></script>
+
 <div class="page-content">
     <div class="div">
         <div class="ww-home-page" id="home">
@@ -78,133 +42,66 @@
                 </div>
             </div>
         </div>
-        <div class="ww-nav-bar sticky-top bg-light">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                    <button aria-controls="ww-navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-                            class="navbar-toggler"
-                            data-target="#ww-navbarNav" data-toggle="collapse" type="button">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse text-uppercase" id="ww-navbarNav">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#home">Home</a></li>
-                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#couple">Couple</a></li>
-                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#events">Events</a></li>
-                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#gallery">Gallery</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
         <div class="ww-section" id="couple">
             <div class="container">
-                <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">신랑 & 신부</h2>
+                <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">Invitation</h2>
                 <div class="row text-center">
-                    <div class="col-md-6">
-                        <div class="mt-3">
-                            <h3 class="h2 ww-title" style="font-family: 'Sunflower', sans-serif; font-size:1.5em">
-                                여기를 인비테이션 문구로 변경</h3>
-                            <img alt="Groom" class="img-fluid" src="images/pic8.jpeg"/>
-                        </div>
+                    <div class="col text-center mb-5">
+                    <h3 style="font-family: 'Sunflower', sans-serif; font-size:1.5em">
+                        <br>
+                        서로가 마주보며 다져온 사랑을<br>
+                        이제 함께 한 곳을 바라보며<br>
+                        걸어갈 수 있는 큰 사랑으로 키우고자 합니다.<br>
+                        저희 두 사람이 사랑의 이름으로<br>
+                        지켜나갈 수 있게 앞날을<br>
+                        축복해 주시면 감사하겠습니다.</h3>
                     </div>
-                    <div class="col-md-6">
-                        <div class="mt-3">
-                            <h3 class="h2 ww-title" style="font-family: 'Sunflower', sans-serif; font-size:1.5em">
-                                최원영</h3>
-                            <img alt="Bride" class="img-fluid" src="images/pic9.jpeg"/>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="ww-section bg-light" id="events">
             <div class="container ww-wedding-event">
-                <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">초대합니다</h2>
                     <div class="col text-center mb-5">
                         <h6 style="font-family: 'Noto Serif KR', serif;">
                             여기를 연락처 및 계좌번호 조회 기능으로 변경...
                         </h6>
                     </div>
-                <div class="row">
-                    <div class="col-md-7 col-sm-12">
-                        <div class="my-3">
-                            <div class="h4">웨딩 본식</div>
-                            <ul>
-                                <li>
-                                    <i class="text-muted fas fa-map-marker-alt"></i>
-                                    <span class="pl-2 text-muted">부산 해운대 우동 센텀사이언스 파크 23층</span>
-                                </li>
-                                <li class="pt-2">
-                                    <i class="text-muted far fa-calendar-alt"></i>
-                                    <span class="pl-2 text-muted">2019년 5월 18일, 2:30PM</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-sm-12">
-                        <div class="my-3">
-                            <img alt="Wedding Party" class="img-fluid" src="images/wedding-party.jpg"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-7 col-sm-12">
-                        <div class="my-3">
-                            <div class="h4">식사</div>
-                            <ul>
-                                <li>
-                                    <i class="text-muted fas fa-map-marker-alt "></i>
-                                    <span class="pl-2 text-muted">부산 해운대 우동 센텀사이언스 파크 지하 1층 더파티 센텀점</span>
-                                </li>
-                                <li class="pt-2">
-                                    <i class="text-muted far fa-calendar-alt "></i>
-                                    <span class="pl-2 text-muted">2019년 5월 18일, 2:30PM - 4:30PM</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-sm-12">
-                        <div class="my-3"><img alt="Reception" class="img-fluid" src="images/reception.jpg"/></div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="ww-section" id="gallery">
             <div class="ww-photo-gallery">
                 <div class="container">
-                    <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">포토 갤러리</h2>
+                    <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">Gallery</h2>
                     <div class="ww-gallery">
                         <div class="card-columns">
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]">
                                 <a data-gallery="ww-gallery" data-toggle="lightbox">
-                                    <img alt="Gallery Pic 2" class="img-fluid" src="images/pic2.jpeg"/>
+                                    <img alt="Gallery Pic 2" class="img-fluid" src="mypics/1.jpg"/>
                                 </a>
                             </div>
                             <div class="card" data-groups="[&quot;vacation&quot;]">
                                 <a data-gallery="ww-gallery" data-toggle="lightbox">
-                                    <img alt="Gallery Pic 3" class="img-fluid" src="images/pic3.jpeg"/>
+                                    <img alt="Gallery Pic 3" class="img-fluid" src="mypics/2.jpg"/>
                                 </a>
                             </div>
                             <div class="card" data-groups="[&quot;party&quot;,&quot;vacation&quot;]">
                                 <a data-gallery="ww-gallery" data-toggle="lightbox">
-                                    <img alt="Gallery Pic 4" class="img-fluid" src="images/pic4.jpeg"/>
+                                    <img alt="Gallery Pic 4" class="img-fluid" src="mypics/3.jpg"/>
                                 </a>
                             </div>
                             <div class="card" data-groups="[&quot;vacation&quot;]">
                                 <a data-gallery="ww-gallery" data-toggle="lightbox">
-                                    <img alt="Gallery Pic 5" class="img-fluid" src="images/pic6.jpeg"/>
+                                    <img alt="Gallery Pic 5" class="img-fluid" src="mypics/4.jpg"/>
                                 </a>
                             </div>
                             <div class="card"
                                  data-groups="[&quot;wedding&quot;,&quot;ceremony&quot;,&quot;party&quot;]">
                                 <a data-gallery="ww-gallery" data-toggle="lightbox">
-                                    <img alt="Gallery Pic 6" class="img-fluid" src="images/pic7.jpeg"/>
+                                    <img alt="Gallery Pic 6" class="img-fluid" src="mypics/5.jpg"/>
                                 </a>
                             </div>
                             <div class="card" data-groups="[&quot;vacation&quot;]">
                                 <a data-gallery="ww-gallery" data-toggle="lightbox">
-                                    <img alt="Gallery Pic 7" class="img-fluid" src="images/pic5.jpeg"/>
+                                    <img alt="Gallery Pic 7" class="img-fluid" src="mypics/6.jpg"/>
                                 </a>
                             </div>
                         </div>
@@ -218,8 +115,8 @@
                 <div class="col text-center">
                     <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">오시는 길</h2>
                     <div>
-                        <h5 style="font-family: 'Noto Serif KR', serif;">센텀사이언스파크웨딩홀 23층 스카이홀</h5>
-                        <h6 style="font-family: 'Noto Serif KR', serif;">(부산 해운대구 센텀중앙로 79)</h6>
+                        <h5 style="font-family: 'Noto Serif KR', serif;">그랜드 모먼트 클래식 홀</h5>
+                        <h6 style="font-family: 'Noto Serif KR', serif;">(부산 남구 황령대로 401-9)</h6>
                     </div>
                 </div>
 
@@ -241,13 +138,16 @@
                         </div>
                         <div class="col text-center">
                             <label style="font-family: 'Noto Serif KR', serif; font-size: 15px;">
-                                셔틀버스 - 센텀시티역 4번출구앞에서 15분 간격으로 운행
+                                셔틀버스 - 남천역 4번출구 앞 뚜레쥬르
                             </label>
                         </div>
                         <div class="my-3">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.297439052569!2d129.1238775160104!3d35.1741384652207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356892c2513ecf5d%3A0x7d362ece2091e2f8!2z7IS87YWA7IKs7J207Ja47Iqk7YyM7YGsIOy7qOuypOyFmO2ZgA!5e0!3m2!1sko!2skr!4v1554092125630!5m2!1sko!2skr" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
-                        최하단에 공유기능 추가 예정 (카톡... 링크 복사)
+                        통영 피로연 추가 요망<br>
+                        최하단에 공유기능 추가 예정 (카톡... 링크 복사)<br>
+                        음악기능 일단 없앨 것
+                        내비게이션도 없애도 될듯
                     </div>
                 </div>
 
@@ -258,34 +158,7 @@
     </div>
 </div>
 </div>
-<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="giftMailModal" role="dialog"
-     tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">선물하기 - <span id="gift-name"></span></h5>
-                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">보내는 분 성함</span>
-                    </div>
-                    <input aria-describedby="basic-addon3" class="form-control" id="sender-name" type="text">
-                </div>
-                <div class="input-group">
-                    <textarea aria-label="With textarea" class="form-control" id="sender-message"
-                              placeholder="신랑, 신부에게 선물 예약과 함께 보낼 메시지를 입력해주세요. 이 메시지는 신랑, 신부에게 발송됩니다." rows=4></textarea>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" id="reserveGiftButton" type="button">예약</button>
-            </div>
-        </div>
-    </div>
-</div>
+
 <footer></footer>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -298,12 +171,14 @@
 <div class="bottom_right"><i class="fa fa-arrow-up fa-2x" id="go-to-top"></i>
 </div>
 
+<!--
 <div class="bottom_left">
     <audio id="player" src="mus.mp3"></audio>
     <div>
         <i class="fa fa-music fa-2x" onclick="document.getElementById('player').play()"></i>
     </div>
 </div>
+-->
 
 </body>
 </html>
