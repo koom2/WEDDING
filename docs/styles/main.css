@@ -10199,7 +10199,7 @@ body {
 }
 
 /** toast style **/
-#wrap .toast {
+.toast {
     position: fixed;
     width:90%;
     max-width:500px;
@@ -10211,7 +10211,7 @@ body {
     text-align:center;
 }
 
-#wrap .toast p {
+.toast p {
     display: none;
     font-size: 15px;
     line-height:21px;
