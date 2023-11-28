@@ -20,6 +20,22 @@
           rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        div.acc_left 
+        {
+            width: 50%;
+            float: left;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        div.acc_right
+        {
+            width: 50%;
+            float: right;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body id="top">
@@ -49,21 +65,31 @@
                     <div class="col text-center mb-5">
                     <h3 style="font-family: 'Sunflower', sans-serif; font-size:1.5em">
                         <br>
-                        함께 하는 사랑의 의미는<br>
-                        이 세상의 어떤 말로도 표현할 수 없는<br>
-                        아름다운 것입니다.<br>
-                        저희의 사랑을 함께 축복하여 주시면<br>
-                        큰 힘으로 삼겠습니다.</h3>
+                        새로이 시작하는 작은 사랑이<br>
+                        보다 크고 깊은 사랑이 되려고 합니다.<br>
+                        함께 자리하여 축복해 주시면<br>
+                        더 없는 기쁨이겠습니다.</h3>
                     </div>
             </div>
         </div>
         <div class="ww-section bg-light" id="events">
             <div class="container ww-wedding-event">
-                    <div class="col text-center mb-5">
-                        <h6 style="font-family: 'Noto Serif KR', serif;">
-                            여기를 연락처 및 계좌번호 조회 기능으로 변경...
+                <div class="acc_left">
+                    <h6 style="font-family: 'Noto Serif KR', serif;">
+                        여기를 연락처 및 <br>
+                        계좌번호 조회 기능으로 변경...
+                        <a href="#" class="btn an_btn type03 groom" data-idx="1">신랑 측 계좌번호</a>
+                    </h6>
+                </div>
+                <div class="acc_right">
+                    <h6 style="font-family: 'Noto Serif KR', serif;">
+                        여기를 연락처 및 계좌번호 <br>조회 기능으로 변경...
+                    </h6>
+                </div>
+                <div class="col text-center mb-5">
+                    <h6 style="font-family: 'Noto Serif KR', serif;">
                         </h6>
-                    </div>
+                </div>
             </div>
         </div>
         <div class="ww-section" id="gallery">
@@ -158,7 +184,147 @@
 </div>
 </div>
 
+<div class="account_pop" data-idx="1" style="display: none;">
+    <div class="layer_pop">
+        <div class="account_list">
+            <dl>
+                <dt>
+                    <span>신랑혼주</span>&nbsp;&nbsp;계좌
+                    <a href="#" class="copy_account copy_btn" data-account="86602131220">복사하기</a>
+                </dt>
+                <dd>
+                                <span>
+                                    NH농협
+                                </span>&nbsp;&nbsp;(예금주 : <span>박영호</span>)
+                </dd>
+                <dd>
+                    <span>86602131220</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <span>신랑혼주</span>&nbsp;&nbsp;계좌
+                    <a href="#" class="copy_account copy_btn" data-account="1002661907330">복사하기</a>
+                </dt>
+                <dd>
+                                <span>
+                                    우리은행
+                                </span>&nbsp;&nbsp;(예금주 : <span>김경덕</span>)
+                </dd>
+                <dd>
+                    <span>1002661907330</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <span>신랑</span>&nbsp;&nbsp;계좌
+                    <a href="#" class="copy_account copy_btn" data-account="3029846007941">복사하기</a>
+                </dt>
+                <dd>
+                                <span>
+                                    NH농협
+                                </span>&nbsp;&nbsp;(예금주 : <span>박경락</span>)
+                </dd>
+                <dd>
+                    <span>3029846007941</span>
+                </dd>
+            </dl>
+        </div>
+        <div class="btn_wrap type01">
+            <a href="#" class="btn_acc close">닫기</a>
+        </div>
+
+    </div>
+    <div class="pop_mask"></div>
+</div>
+
 <footer></footer>
+<script type="text/javascript">
+    $(document).ready(function (e) {
+        var _url = $('meta[property="og:url"]').attr('content');
+        var _title = $('meta[property="og:title"]').attr('content');
+        var _desc = $('meta[property="og:description"]').attr('content');
+        var _image = $('meta[property="og:image"]').attr('content');
+        var _imgWidth = $('meta[property="og:image:width"]').attr('content');
+        var _imgHeight = $('meta[property="og:image:height"]').attr('content');
+        var _eventDateTime = $("#eventDateTime").val();
+        var _addressDetail = $("#addressDetail").text();
+        // 카카오링크 버튼
+        var kakaoDesc = _desc;
+        if (_eventDateTime.length > 0) {
+            kakaoDesc = _eventDateTime + "\n" + _desc;
+        }
+        Kakao.init('94a08cfa99972d4a71c99401069b1311');
+        //Kakao.isInitialized();
+        if ((_addressDetail != null && _addressDetail.length > 0) &&
+            (_image != null && _image.length > 0)) {
+            Kakao.Link.createDefaultButton({
+                container: '#kakao-link-btn',   // 버튼 id
+                objectType: 'location',         // 카카오톡 링크 타입
+                content: {
+                    title: _title,              // 타이틀
+                    description: kakaoDesc,
+                    imageUrl: _image,           // 이미지
+                    link: {
+                        mobileWebUrl: _url,     // 모바일 주소
+                        webUrl: _url            // 웹 주소
+                    },
+                    imageWidth: parseInt(_imgWidth == null ? 0 : _imgWidth),
+                    imageHeight: parseInt(_imgHeight == null ? 0 : _imgWidth)
+                },
+                address: _addressDetail
+
+            });
+            //공유할 예식장 주소가 없으면
+        } else if ((_addressDetail.length == 0) && (_image != null && _image.length > 0)) {
+            Kakao.Share.createDefaultButton({
+                container: '#kakao-link-btn',
+                objectType: 'feed',
+                content: {
+                    title: _title,
+                    description: kakaoDesc,
+                    imageUrl: _image,
+                    link: {
+                        mobileWebUrl: _url,
+                        webUrl: _url,
+                    },
+                    imageWidth: parseInt(_imgWidth == null ? 0 : _imgWidth),
+                    imageHeight: parseInt(_imgHeight == null ? 0 : _imgWidth)
+                },
+                buttons: [
+                    {
+                        title: '자세히 보기',
+                        link: {
+                            mobileWebUrl: _url,
+                            webUrl: _url,
+                        },
+                    }
+                ],
+            });
+        }else {
+            $("#kakao-link-btn").hide();
+        }
+
+        //축의금 내용이 없으면 버튼 숨김
+        const idxs = [];
+        $(".account_pop").each(function (i) {
+            idxs.push($(this).attr("data-idx"));
+        });
+
+        //신랑
+        if (idxs.indexOf("1") == -1){
+            $(".groom").hide();
+        }
+
+        //신부
+        if (idxs.indexOf("2") == -1) {
+            $(".bride").hide();
+        }
+    });
+
+</script>
+
+
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

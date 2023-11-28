@@ -39,6 +39,51 @@ $(document).ready(function () {
             alert("메시지 전송이 실패했습니다. 다시 시도해주세요.");
         });
     })
+
+    //클립보드 복사 - 안드로이드 제외 클릭 이벤트
+    $("a.copy_url").on('click', function (e) {
+        e.preventDefault();
+        copyToClipboard($(this).attr("href"));
+
+        if (varUA.indexOf('android') > -1) {
+            return false;
+        } else {
+            toastPopup('URL이 복사되었습니다.', 1500);
+        }
+    });
+    
+    //계좌번호 팝업
+    $("a.an_btn").on('click', function (e) {
+        e.preventDefault();
+        $('div.account_pop').hide();
+
+        var idx = $(this).attr('data-idx');
+        $('div.account_pop').each(function(i, popitem) {
+            if ($(popitem).attr('data-idx') == idx) {
+                $(popitem).show();
+                scrollDisable();
+            }
+        });
+    });
+    //계좌번호 팝업 닫기
+    $('.btn_acc.close').on('click', function (e) {
+        e.preventDefault();
+        $('div.account_pop').hide();
+        scrollAble();
+    });
+    //계좌 클립보드 복사
+    $("a.copy_account").on('click', function (e) {
+        e.preventDefault();
+        var account = $(this).attr('data-account');
+        var copyacc = account.replace(/-/g, "");
+        copyToClipboard(copyacc);
+
+        if (varUA.indexOf('android') > -1) {
+            return false;
+        } else {
+            toastPopup('복사되었습니다.', 1500);
+        }
+    });
 })
 
 // Smooth scroll for links with hashes
