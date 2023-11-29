@@ -10152,12 +10152,42 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 66px;
+    width: 65px;
     height: 22px;
     line-height: 22px;
     background: #757575;
     font-size: 12px !important;
     color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    font-family: "Noto Sans Kr", sans-serif;
+}
+
+.account_pop .layer_pop dl dt .toss_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65px;
+    height: 22px;
+    line-height: 22px;
+    background: #0064FF;
+    font-size: 12px !important;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    font-family: "Noto Sans Kr", sans-serif;
+}
+
+.account_pop .layer_pop dl dt .kakao_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65px;
+    height: 22px;
+    line-height: 22px;
+    background: #FEE500;
+    font-size: 12px !important;
+    color: #000;
     text-align: center;
     border-radius: 20px;
     font-family: "Noto Sans Kr", sans-serif;
