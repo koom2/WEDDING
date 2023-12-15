@@ -34,12 +34,13 @@
             text-align: center;
         }
     </style>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
 </head>
 
 <body id="top">
@@ -134,62 +135,62 @@
                     <div class="ww-gallery">
                         <div class="card-columns">
                             <div class="card">
-                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                <a href="mypics/00.jpg" data-fancybox="gallery">
                                     <img class="img-fluid" src="mypics/00.jpg"/>
                                 </a>
                             </div>
                             <div class="card">
-                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                <a href="mypics/01.jpg" data-fancybox="gallery">
                                     <img class="img-fluid" src="mypics/01.jpg"/>
                                 </a>
                             </div>
                             <div class="card">
-                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                <a href="mypics/02.jpg" data-fancybox="gallery">
                                     <img class="img-fluid" src="mypics/02.jpg"/>
                                 </a>
                             </div>
                             <div class="card">
-                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                <a href="mypics/03.jpg" data-fancybox="gallery">
                                     <img class="img-fluid" src="mypics/03.jpg"/>
                                 </a>
                             </div>
                             <div class="card">
-                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                <a href="mypics/04.jpg" data-fancybox="gallery">
                                     <img class="img-fluid" src="mypics/04.jpg"/>
                                 </a>
                             </div>
                             <div class="card">
-                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                <a href="mypics/05.jpg" data-fancybox="gallery">
                                     <img class="img-fluid" src="mypics/05.jpg"/>
                                 </a>
                             </div>
                             <div class="card">
-                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                <a href="mypics/06.jpg" data-fancybox="gallery">
                                     <img class="img-fluid" src="mypics/06.jpg"/>
                                 </a>
                             </div>
                             <div class="card">
-                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                <a href="mypics/07.jpg" data-fancybox="gallery">
                                     <img class="img-fluid" src="mypics/07.jpg"/>
                                 </a>
                             </div>
                             <div class="card">
-                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                <a href="mypics/08.jpg" data-fancybox="gallery">
                                     <img class="img-fluid" src="mypics/08.jpg"/>
                                 </a>
                             </div>
                             <div class="card">
-                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                <a href="mypics/09.jpg" data-fancybox="gallery">
                                     <img class="img-fluid" src="mypics/09.jpg"/>
                                 </a>
                             </div>
                             <div class="card">
-                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                <a href="mypics/10.jpg" data-fancybox="gallery">
                                     <img class="img-fluid" src="mypics/10.jpg"/>
                                 </a>
                             </div>
                             <div class="card">
-                                <a data-gallery="ww-gallery" data-toggle="lightbox">
+                                <a href="mypics/11.jpg" data-fancybox="gallery">
                                     <img class="img-fluid" src="mypics/11.jpg"/>
                                 </a>
                             </div>
@@ -477,6 +478,10 @@
         if (idxs.indexOf("2") == -1) {
             $(".bride").hide();
         }
+    });
+
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
     });
 
 </script>
